@@ -13,7 +13,7 @@ const CategoryModel = require("./models/category");
 const { DB_USER, DB_PASSWORD, DB_HOST, DBURL } = process.env;
 
 const sequelize = new Sequelize(
-	//`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/educastream`,
+	// `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/educastream`,
 	DBURL,
 	{
 		logging: false,
@@ -37,7 +37,7 @@ Course.hasMany(Lesson, { as: "lesson" });
 Lesson.belongsTo(Course);
 
 //Cursos con Ratings
-Course.hasMany(Rating);
+Course.hasMany(Rating, { as: "ratings" });
 //Rating.belongsTo(Course, { foreignKey: "course_id" });
 Rating.belongsTo(Course);
 
