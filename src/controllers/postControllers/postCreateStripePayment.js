@@ -1,6 +1,6 @@
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPEKEY);
-const url = require(process.env.BACKEND_URL);
+const url = process.env.BACKEND_URL;
 
 const postCreateStripePayment = async (req, res) => {
 	const line_items = req.body.cartItems.map((item) => {
