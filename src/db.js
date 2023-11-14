@@ -10,11 +10,10 @@ const UserModel = require("./models/user");
 const CategoryModel = require("./models/category");
 //const ConsumptionModel = require("./models/consumption");
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DBURL } = process.env;
+const { DBURL } = process.env;
 
 const sequelize = new Sequelize(
-	`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/educastream`,
-	//DBURL,
+	DBURL,
 	{
 		logging: false,
 		native: false,
