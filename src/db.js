@@ -10,12 +10,11 @@ const UserModel = require("./models/user");
 const CategoryModel = require("./models/category");
 //const ConsumptionModel = require("./models/consumption");
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DBURL } = process.env;
+// const { DB_USER, DB_PASSWORD, DB_HOST, DBURL } = process.env;
 
 const sequelize = new Sequelize(
 
-	   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/educastream`, 
-	//  DBURL,
+	"postgres://postgres:FgB*AF6d3EEE4EEcbc46F6dFcGCCEcFB@roundhouse.proxy.rlwy.net:53468/railway",
 	{ 
 
 		logging: false,
